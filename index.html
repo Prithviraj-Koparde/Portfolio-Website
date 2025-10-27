@@ -14,16 +14,16 @@
 </head>
 
 <body>
-    <section class="section-1">
+    <section class="section-1" id="home">
         <nav>
-            <h3>Home</h3>
-            <h3>About</h3>
-            <h3>Skills</h3>
-            <h3>Projects</h3>
-            <h3>Contact me</h3>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact-me">Contact me</a>
         </nav>
         <div id="profile-pic">
-            <img src="Profile-photo.png" alt="profile-photo">
+            <img src="images/Profile-photo.png" alt="profile-photo">
         </div>
         <div id="intro">
             <h1>Prithviraj Koparde</h1>
@@ -37,7 +37,57 @@
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <section class="section-2" id="about">
+        <div id="section-2-top">
+            <button id="btn-1">Springboot</button>
+            <button id="btn-2">Version control</button>
+            <button id="btn-3">Best practices</button>
+        </div>
+        <div id="section-2-bottom">
+            <div id="section-2-bottom-left">
+                <div id="circle-1"></div>
+                <div id="circle-2"></div>
+                <div id="circle-3"></div>
+                <img src="images/Profile-photo.png" alt="">
+            </div>
+            <div id="section-2-bottom-right">
+                <div id="experience">
+                    <h1>Experience</h1>
+                    <div id="exp-1">
+                        <h2>Junior Web Developer</h2>
+                        <h3>Knowledge solutions India 2021 - 2022 - Previous</h3>
+                        <p>Completed 2 months internship.</p>
+                    </div>
+                    <div id="exp-2">
+                        <h2>Junior Android Developer</h2>
+                        <h3>MindScript 2022 - 2023 - Previous</h3>
+                        <p>Completed 1 month internship.</p>
+                    </div>
+                </div>
+                <div id="education">
+                        <h2>Bachelor's in Computer Engineering</h2>
+                        <h3>Mumbai University 2021 - 2025</h3>
+                        <p>Specialized in Web Technologies</p>
+                </div>
+                <div id="interests">
+                        <h2>Interests</h2>
+                        <ul>
+                            <li>Backend Devlopment</li>
+                            <li>Frontend Development</li>
+                            <li>Gsap library</li>
+                            <li>Leetcode</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 

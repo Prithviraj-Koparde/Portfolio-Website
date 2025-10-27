@@ -1,7 +1,7 @@
 function firstpage() {
     let tl = gsap.timeline()
 
-    tl.from("nav h3", {
+    tl.from("nav a", {
         y: -100,
         opacity: 0,
         stagger: 0.2,
@@ -31,4 +31,45 @@ function firstpage() {
         duration: 1
     })
 }
-firstpage()
+// firstpage()
+
+let tl = gsap.timeline()
+
+gsap.from("#section-2-top #btn-1", {
+    x: -200,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#btn-1",
+        scroller: "body",
+        markers: true,
+        start: "top 50%",
+        end: "top 50%",
+    }
+})
+
+gsap.from("#section-2-top #btn-2", {
+    y: -100,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#btn-1",
+        scroller: "body",
+        markers: true,
+        start: "top 50%",
+        end: "top 50%",
+    }
+})
+
+gsap.from("#section-2-top #btn-3", {
+    x: 200,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#btn-1",
+        scroller: "body",
+        markers: true,
+        start: "top 50%",
+        end: "top 50%",
+    }
+})
