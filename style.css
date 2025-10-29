@@ -419,10 +419,10 @@ h1 {
 /* -------------------------- thrid page ---------------------------- */
 
 .section-3 {
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     background: radial-gradient(#232222, #131313, #121212);
-    padding-top: 75px;
+    padding-top: 10vh;
 }
 
 .section-3 #section-3-top {
@@ -450,3 +450,95 @@ h1 {
     font-weight: 400;
     color: #E0E0E0;
 }
+
+#section-3-main {
+    height: 180vh;
+    width: 100%;
+    background-color: #01383a;
+}
+
+#frontend {
+    height: 55vh;
+    width: 90%;
+    background-color: #035d60;
+}
+
+#frontend #frontendh1 {
+    font-family: "Inter", sans-serif;
+    color: #E0E0E0;
+}
+
+#card-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 85%;
+    width: 100%;
+    background-color: #a8aeae;
+}
+
+#card {
+    height: 20vh;
+    width: 400px;
+    border-radius: 20px;
+    background-color: rebeccapurple;
+}
+
+#card-top {
+    height: 5vh;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #00f2fe;
+    align-content: center;
+}
+
+#card-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 10vh;
+    width: 100%;
+    background-color: #fe3700;
+    border-radius: 20px;
+}
+
+#card-main #progress-bar {
+    height: 2vh;
+    width: 85%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#progress-bar #loader {
+    height: 100%;
+    width: 85%;
+    background-color: rgb(86, 2, 2);
+    border-radius: 20px;
+}
+
+/* #backend{
+    height: 55vh;
+    width: 90%;
+    background-color: #035d60;
+}
+
+#devoops{
+    height: 55vh;
+    width: 90%;
+    background-color: #035d60;
+} */
+
+/* Java — 85%
+Spring Boot — 80%
+JavaScript — 70%
+TypeScript — 65%
+Angular — 60%
+Tailwind CSS — 45%
+PostgreSQL — 55%
+Git — 70%
+Docker — 50%
+AWS — 40% */
