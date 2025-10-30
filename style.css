@@ -419,24 +419,19 @@ h1 {
 /* -------------------------- thrid page ---------------------------- */
 
 .section-3 {
-    height: 200vh;
     width: 100%;
     background: radial-gradient(#232222, #131313, #121212);
-    padding-top: 10vh;
+    padding: 100px 0;
 }
 
 .section-3 #section-3-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 #section-3-top-h1 {
     font-family: "Inter", sans-serif;
-    font-size: 5vh;
+    font-size: clamp(1.8rem, 4vw, 3rem);
     background: linear-gradient(30deg, #4facfe, #00f2fe, #02a8b1);
     -webkit-background-clip: text;
     background-clip: text;
@@ -446,91 +441,128 @@ h1 {
 
 #section-3-top-h3 {
     font-family: "Inter", sans-serif;
-    font-size: 15px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-weight: 400;
     color: #E0E0E0;
 }
 
 #section-3-main {
-    height: 180vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
     width: 100%;
-    background-color: #01383a;
 }
 
-#frontend {
-    height: 55vh;
+/* Section Boxes */
+#frontend,
+#backend,
+#devops {
+    background-color: #272727;
+    border-radius: 20px;
     width: 90%;
-    background-color: #035d60;
+    padding: 1.5rem;
 }
 
-#frontend #frontendh1 {
+#section-3-main h1 {
     font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     color: #E0E0E0;
 }
 
-#card-container {
+/* Card Containers */
+.card-container {
     display: flex;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
     flex-wrap: wrap;
-    height: 85%;
-    width: 100%;
-    background-color: #a8aeae;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
-#card {
-    height: 20vh;
-    width: 400px;
+/* Card Design */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
     border-radius: 20px;
-    background-color: rebeccapurple;
+    background: linear-gradient(145deg, #3b3a3a, #2e2e2e);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    font-family: "Inter", sans-serif;
+    color: #E0E0E0;
+    width: clamp(240px, 45%, 350px);
 }
 
-#card-top {
-    height: 5vh;
-    width: 100%;
-    border-radius: 20px;
-    background-color: #00f2fe;
-    align-content: center;
-}
-
-#card-main {
+/* Card Header */
+.card-top {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    height: 10vh;
     width: 100%;
-    background-color: #fe3700;
-    border-radius: 20px;
 }
 
-#card-main #progress-bar {
-    height: 2vh;
-    width: 85%;
-    background-color: white;
-    border-radius: 20px;
+.icons {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
 }
 
-#progress-bar #loader {
+/* Progress Bar */
+.card-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #963a25;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.loader {
     height: 100%;
-    width: 85%;
-    background-color: rgb(86, 2, 2);
+    background: linear-gradient(90deg, #00ffff, #00bcd4);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
     border-radius: 20px;
 }
 
-/* #backend{
-    height: 55vh;
-    width: 90%;
-    background-color: #035d60;
+.loader-percentage {
+    font-size: 0.9rem;
 }
 
-#devoops{
-    height: 55vh;
-    width: 90%;
-    background-color: #035d60;
-} */
+/* ✅ Responsive Media Queries */
+@media (max-width: 992px) {
+    .card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    #section-3-top-h1 {
+        font-size: 1.6rem;
+    }
+
+    #section-3-top-h3 {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .icons {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+
 
 /* Java — 85%
 Spring Boot — 80%

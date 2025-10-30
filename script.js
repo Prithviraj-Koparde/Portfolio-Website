@@ -12,7 +12,7 @@ function firstpage() {
         opacity: 0,
     })
 
-    tl.from("#intro h1,h2,p", {
+    tl.from("#intro h1, #intro h2, #intro p", {
         y: 100,
         opacity: 0,
         stagger: 0.3
@@ -136,5 +136,66 @@ function secondpage() {
     })
 }
 
-secondpage()
+// secondpage()
 
+// ------------------------------third page-------------------------------
+
+gsap.from("#section-3-top-h1", {
+    x: 200,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: "#section-3-top-h1",
+        scroller: "body",
+        markers: true,
+        start: "top 60%",
+        end: "top 70%",
+        scrub: 0.5,
+        ease: "power2.out"
+    }
+})
+
+gsap.from("#section-3-top-h3", {
+    x: -200,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: "#section-3-top-h3",
+        scroller: "body",
+        markers: true,
+        start: "top 60%",
+        end: "top 70%",
+        scrub: 0.5,
+        ease: "power2.out"
+    }
+})
+
+
+const skills = [
+    { selector: ".ang-load", percent: 60 },
+    { selector: ".html-load", percent: 95 },
+    { selector: ".css-load", percent: 90 },
+    { selector: ".js-load", percent: 70 },
+    { selector: ".ts-load", percent: 65 },
+    { selector: ".tcss-load", percent: 50 },
+    { selector: ".java-load", percent: 85 },
+    { selector: ".spring-load", percent: 80 },
+    { selector: ".sql-load", percent: 55 },
+    { selector: ".git-load", percent: 70 },
+    { selector: ".docker-load", percent: 50 },
+    { selector: ".aws-load", percent: 40 }
+];
+
+skills.forEach((skill, index) => {
+    const loader = document.querySelector(skill.selector);
+    const percentage = document.querySelectorAll(".loader-percentage")[index];
+    let count = 0;
+
+    let loadTime = setInterval(() => {
+        if (count <= skill.percent) {
+            count++;
+            loader.style.width = `${count}%`
+            percentage.textContent = `${count}%`
+        } else {
+            clearInterval(loadTime);
+        }
+    }, 20);
+});
