@@ -184,18 +184,28 @@ const skills = [
     { selector: ".aws-load", percent: 40 }
 ];
 
-skills.forEach((skill, index) => {
-    const loader = document.querySelector(skill.selector);
-    const percentage = document.querySelectorAll(".loader-percentage")[index];
-    let count = 0;
 
-    let loadTime = setInterval(() => {
-        if (count <= skill.percent) {
-            count++;
-            loader.style.width = `${count}%`
-            percentage.textContent = `${count}%`
-        } else {
-            clearInterval(loadTime);
-        }
-    }, 20);
-});
+
+ScrollTrigger.create({
+    trigger: "#frontend",
+    scroller: "body",
+    markers: true,
+    start: "top 70%",
+    once: true,
+    onEnter: () => {
+        skills.forEach((skill, index) => {
+            const loader = document.querySelector(skill.selector)
+            const percentage = document.querySelectorAll(".loader-percentage")[index]
+            let count = 0
+
+            const loadTime = setInterval(() => {
+                if (count <= skill.percent) {
+                    count++
+                    loader.style.width = `${count}%`
+                    percentage.textContent = `${count}%`
+                }
+                else clearInterval(loadTime)
+            }, 20)
+        })
+    }
+})

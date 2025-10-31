@@ -17,9 +17,10 @@ body {
     width: 100%;
     max-width: 100vw;
     background-color: #121212;
-    z-index: 0;
     padding-top: 100px;
 }
+
+/* ----------------nav-bar------------------ */
 
 nav {
     position: fixed;
@@ -32,14 +33,17 @@ nav {
     height: 10%;
     width: 100%;
     background-color: #121212;
+    flex-wrap: wrap;
+    padding: 0 10px;
 }
 
 nav a {
     font-family: "Poppins", sans-serif;
-    font-size: 25px;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #E0E0E0;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -58,70 +62,164 @@ nav a:hover {
 
 #profile-pic img {
     height: 400px;
+    width: 400px;
     border-radius: 100%;
+    object-fit: cover;
 }
+
+/* -----------------------intro-section--------------------------- */
 
 #intro {
     font-family: "Inter", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: first baseline;
+    justify-content: start;
     height: 35%;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 40px;
+    text-align: center;
+    padding: 0px 20px;
 }
 
 #intro h1 {
-    font-size: 5vh;
+    font-size: 2.8rem;
     background: linear-gradient(55deg, #4facfe, #00f2fe, #02a8b1);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
+    line-height: 1.2;
 }
 
 #intro h1:hover {
     background: linear-gradient(55deg, #02a8b1, #00f2fe, #4facfe);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 1s;
     cursor: pointer;
 }
 
 #intro h2 {
-    font-size: 25px;
+    font-size: 1.3rem;
     margin-bottom: 10px;
     color: #E0E0E0;
 }
 
 #intro p {
-    font-size: 15px;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    max-width: 600px;
     color: #E0E0E0;
 }
 
 #buttons {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 40px;
     margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #buttons button {
     background: linear-gradient(30deg, #E0E0E0, #BDBDBD, #9E9E9E);
-    padding: 12px 22px;
+    padding: 12px 24px;
     border-radius: 50px;
     border: none;
-    font-size: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #121212;
+    transition: all 0.4s ease;
 }
 
 #buttons button:hover {
     background: linear-gradient(30deg, #9E9E9E, #BDBDBD, #E0E0E0);
     box-shadow: 0px 0px 20px #E0E0E0;
     cursor: pointer;
-    transition: 0.5s;
+}
+
+/* --------------- section-1-responsive----------------- */
+    /* tablets <=1024px */
+
+@media (max-width: 1024px) {
+    nav {
+        gap: 30px;
+    }
+    #profile-pic img {
+        height: 300px;
+        width: 300px;
+    }
+    #intro h1 {
+        font-size: 2.3rem;
+    }
+}
+
+    /* mobiles <= 768px */
+
+@media (max-width: 768px) {
+    nav{
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 10px 0px;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+    }
+
+    #profile-pic img{
+        height: 250px;
+        width: 250px;
+    }
+
+    #intro h1 {
+        font-size: 2rem;
+    }
+    #intro h2 {
+        font-size: 1.1rem;
+    }
+    #intro p {
+        font-size: 0.9rem;
+    }
+    #buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+    /* small phones <= 480px */
+
+@media (max-width: 480px) {
+    nav{
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 10px 0px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    #profile-pic img{
+        height: 200px;
+        width: 200px;
+    }
+
+    #intro h1 {
+        font-size: 1.6rem;
+    }
+    #intro h2 {
+        font-size: 1rem;
+    }
+    #intro p {
+        font-size: 0.85rem;
+    }
+    #buttons button{
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
 }
 
 
@@ -305,7 +403,7 @@ h1 {
 }
 
 #section-2-bottom-right #experience h1 {
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     background: linear-gradient(55deg, #4facfe, #00f2fe, #02a8b1);
     -webkit-background-clip: text;
@@ -360,7 +458,7 @@ h1 {
 }
 
 #education h1 {
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     background: linear-gradient(55deg, #4facfe, #00f2fe, #02a8b1);
     -webkit-background-clip: text;
@@ -398,7 +496,7 @@ h1 {
 }
 
 #interests h1 {
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     background: linear-gradient(55deg, #4facfe, #00f2fe, #02a8b1);
     -webkit-background-clip: text;
@@ -430,7 +528,7 @@ h1 {
 }
 
 #section-3-top-h1 {
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: clamp(1.8rem, 4vw, 3rem);
     background: linear-gradient(30deg, #4facfe, #00f2fe, #02a8b1);
     -webkit-background-clip: text;
@@ -465,7 +563,7 @@ h1 {
 }
 
 #section-3-main h1 {
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #E0E0E0;
