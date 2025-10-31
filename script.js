@@ -1,37 +1,48 @@
 function firstpage() {
-    let tl = gsap.timeline()
+    let tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.8 } })
 
-    tl.from("nav a", {
+    tl.from(".nav-links a", {
         y: -100,
         opacity: 0,
         stagger: 0.2,
     })
+        .from("#profile-pic img", {
+            y: 100,
+            opacity: 0,
+        })
+        .from("#intro h1, #intro h2, #intro p", {
+            y: 80,
+            opacity: 0,
+            stagger: 0.3
+        })
+        .from("#buttons button", {
+            x: 100,
+            opacity: 0,
+            stagger: 0.2
+        })
 
-    tl.from("#profile-pic img", {
-        y: 100,
-        opacity: 0,
-    })
+    const hamMenu = document.querySelector('.ham-menu');
+    const navLinks = document.querySelector('.nav-links');
 
-    tl.from("#intro h1, #intro h2, #intro p", {
-        y: 100,
-        opacity: 0,
-        stagger: 0.3
-    })
+    hamMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
 
-    tl.from("#buttons button", {
-        x: 100,
-        opacity: 0,
-        stagger: 0.2
-    }, "-=0.3")
-
+    // Optional: close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
     gsap.to("#buttons button", {
         scale: 1.01,
         yoyo: true,
         repeat: -1,
-        duration: 1
+        duration: 1,
+        ease: "power1.inOut"
     })
 }
-// firstpage()
+firstpage()
 
 // ------------------------------- page 2 js -----------------------------
 
