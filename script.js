@@ -147,7 +147,7 @@ function secondpage() {
     })
 }
 
-// secondpage()
+secondpage()
 
 // ------------------------------third page-------------------------------
 
@@ -157,7 +157,7 @@ gsap.from("#section-3-top-h1", {
     scrollTrigger: {
         trigger: "#section-3-top-h1",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 60%",
         end: "top 70%",
         scrub: 0.5,
@@ -171,7 +171,7 @@ gsap.from("#section-3-top-h3", {
     scrollTrigger: {
         trigger: "#section-3-top-h3",
         scroller: "body",
-        markers: true,
+        // markers: true,
         start: "top 60%",
         end: "top 70%",
         scrub: 0.5,
@@ -200,7 +200,7 @@ const skills = [
 ScrollTrigger.create({
     trigger: "#frontend",
     scroller: "body",
-    markers: true,
+    // markers: true,
     start: "top 70%",
     once: true,
     onEnter: () => {

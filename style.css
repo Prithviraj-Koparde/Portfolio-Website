@@ -29,11 +29,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    /* space between links and hamburger */
     height: 10%;
     width: 100%;
     background-color: #121212;
-    padding: 0 10px;
+    padding: 0 30px;
 }
 
 /* hide hamburger by default */
@@ -52,6 +52,7 @@ nav {
 /* normal link styling */
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 50px;
 }
 
@@ -211,7 +212,7 @@ nav a:hover {
     }
 }
 
-/* small phones <= 480px */
+/* small phones <= 520px */
 
 @media (max-width: 520px) {
     nav {
@@ -228,11 +229,15 @@ nav a:hover {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #121212;
+        align-items: center;
+        background-color: #121212a1;
+        background-color: blur(20px);
         position: absolute;
         top: 60px;
-        left: 0;
-        width: 70%;
+        right: 0;
+        /* ✅ opens below hamburger on right side */
+        height: 100vh;
+        width: 100%;
         text-align: center;
         padding: 20px 0;
         gap: 20px;
@@ -285,116 +290,81 @@ nav a:hover {
 }
 
 
-/* ---------------------------------- second-page-animation------------------------------------------------ */
+/* ---------------------------------- Second Page Section ------------------------------------------------ */
 
 .section-2 {
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    max-width: 100vw;
     background-color: #121212;
-    z-index: 0;
     padding-top: 75px;
+    z-index: 0;
 }
 
 #section-2-top {
     display: flex;
     gap: 40px;
-    height: 10%;
-    width: 100%;
     align-items: center;
     justify-content: center;
+    height: 10%;
+    width: 100%;
 }
 
-#section-2-top #btn-1 {
+#section-2-top button {
     padding: 12px 25px;
     border-radius: 100px;
     border: none;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#btn-1 {
     background: linear-gradient(30deg, rgb(93, 148, 250), rgb(2, 73, 180), rgb(8, 98, 217));
-    color: white;
-    font-size: 2vh;
 }
 
-#section-2-top #btn-1:hover {
-    padding: 12px 25px;
-    border-radius: 100px;
-    border: none;
+#btn-1:hover {
     background: linear-gradient(30deg, rgb(8, 98, 217), rgb(2, 73, 180), rgb(93, 148, 250));
-    color: white;
-    font-size: 2vh;
-    transition: 0.3s;
 }
 
-#section-2-top #btn-2 {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 100px;
+#btn-2 {
     background: linear-gradient(30deg, rgb(77, 249, 77), rgb(25, 214, 25), rgb(1, 139, 1));
-    color: white;
-    font-size: 2vh;
 }
 
-#section-2-top #btn-2:hover {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 100px;
+#btn-2:hover {
     background: linear-gradient(30deg, rgb(1, 139, 1), rgb(25, 214, 25), rgb(77, 249, 77));
-    color: white;
-    font-size: 2vh;
-    transition: 0.3s;
 }
 
-#section-2-top #btn-3 {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 100px;
+#btn-3 {
     background: linear-gradient(30deg, rgb(245, 187, 78), rgb(214, 150, 32), rgb(164, 108, 3));
-    color: white;
-    font-size: 2vh;
 }
 
-#section-2-top #btn-3:hover {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 100px;
+#btn-3:hover {
     background: linear-gradient(30deg, rgb(164, 108, 3), rgb(214, 150, 32), rgb(245, 187, 78));
-    color: white;
-    font-size: 2vh;
-    transition: 0.3s;
 }
 
 #section-2-top button:hover {
     scale: 1.05;
-    transition: 0.2s;
-    box-shadow: 0px 0px 20px rgb(255, 136, 0);
+    box-shadow: 0px 0px 20px rgba(255, 136, 0, 0.5);
 }
 
-
+/* ---------- Bottom Layout ---------- */
 #section-2-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 90%;
     width: 100%;
-    /* background-color: #02a8b1; */
 }
 
 #section-2-bottom-left {
     position: relative;
     height: 100%;
     width: 40%;
-    /* background-color: #4facfe; */
 }
 
-#section-2-bottom-left #circle-1 {
-    position: absolute;
-    height: 350px;
-    width: 350px;
-    border-radius: 50%;
-    background: linear-gradient(30deg, rgb(93, 148, 250), rgb(2, 73, 180), rgb(8, 98, 217));
-    filter: blur(40px);
-    top: 120px;
-    right: 50px;
-}
-
+#section-2-bottom-left #circle-1,
 #section-2-bottom-left #circle-2 {
     position: absolute;
     height: 350px;
@@ -402,12 +372,19 @@ nav a:hover {
     border-radius: 50%;
     background: linear-gradient(30deg, rgb(93, 148, 250), rgb(2, 73, 180), rgb(8, 98, 217));
     filter: blur(40px);
+}
+
+#circle-1 {
+    top: 120px;
+    right: 50px;
+}
+
+#circle-2 {
     top: 120px;
     left: 50px;
 }
 
-
-#section-2-bottom-left #circle-3 {
+#circle-3 {
     position: absolute;
     height: 350px;
     width: 350px;
@@ -426,154 +403,112 @@ nav a:hover {
     left: 121px;
 }
 
+/* ---------- Right Content ---------- */
 #section-2-bottom-right {
     display: flex;
     flex-direction: column;
     gap: 20px;
     height: 100%;
     width: 60%;
-    /* background-color: #0483f3; */
     padding-top: 10px;
 }
 
-#section-2-bottom-right #experience {
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    justify-content: center;
-    height: 40%;
-    width: 85%;
-    background-color: #212121;
-    padding-left: 20px;
-    border-radius: 20px;
-}
-
-h1 {
-    font-family: "Inter", sans-serif;
-    color: white;
-    margin-bottom: 10px;
-}
-
-#section-2-bottom-right #experience #exp-1 {
-    margin-bottom: 10px;
-    line-height: 22px;
-}
-
-#section-2-bottom-right #experience #exp-2 {
-    margin-bottom: 10px;
-    line-height: 22px;
-}
-
-#section-2-bottom-right #experience h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    background: linear-gradient(55deg, #4facfe, #00f2fe, #02a8b1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-#section-2-bottom-right #experience #exp-1 h2,
-#exp-2 h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: white;
-}
-
-#section-2-bottom-right #experience #exp-1 h3,
-#exp-2 h3 {
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    margin-left: 10px;
-    font-weight: 300;
-    color: #d0cece;
-}
-
-#section-2-bottom-right #experience #exp-1 p,
-#exp-2 p {
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    margin-left: 10px;
-    font-weight: 400;
-    color: #E0E0E0;
-}
-
-#education {
-    height: 25%;
-    width: 85%;
-    background-color: #212121;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 20px;
-    padding-top: 5px;
-    line-height: 22px;
-}
-
-#education h2 {
-    font-family: "Inter", sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: white;
-}
-
-#education h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    background: linear-gradient(55deg, #4facfe, #00f2fe, #02a8b1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
-}
-
-#education h3 {
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    margin-left: 10px;
-    font-weight: 300;
-    color: #d0cece;
-}
-
-#education p {
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    margin-left: 10px;
-    font-weight: 400;
-    color: #E0E0E0;
-}
-
+#experience,
+#education,
 #interests {
-    height: 25%;
     width: 85%;
     background-color: #212121;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    line-height: 22px;
-    flex-direction: column;
-    padding-left: 20px;
+    padding: 20px;
+    color: #E0E0E0;
 }
 
+#experience h1,
+#education h1,
 #interests h1 {
     font-family: "Poppins", sans-serif;
+    font-size: clamp(1rem, 5vw, 2rem);
     font-weight: 600;
+    margin-bottom: 10px;
     background: linear-gradient(55deg, #4facfe, #00f2fe, #02a8b1);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-#interests ul {
-    padding-left: 5px;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    margin-left: 10px;
-    font-weight: 400;
+#experience h2,
+#education h2 {
+    font-size: 1.4rem;
+    color: white;
+}
+
+#experience h3,
+#education h3,
+#interests li {
+    font-size: 1rem;
+    color: #d0cece;
+}
+
+#experience p,
+#education p {
+    font-size: 0.8rem;
     color: #E0E0E0;
 }
+
+#interests ul{
+    padding-left: 15px;
+}
+
+/* ---------- Responsive Styles ---------- */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+    #section-2-bottom-left {
+        display: none;
+    }
+
+    #section-2-bottom-right {
+        width: 100%;
+        align-items: center;
+    }
+
+    #experience,
+    #education,
+    #interests {
+        width: 90%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 520px) {
+    #section-2-top {
+        display: none;
+    }
+
+    #experience,
+    #education,
+    #interests {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #experience h2,
+    #education h2 {
+        font-size: 1.2rem;
+    }
+
+    #experience h3,
+    #education h3,
+    #interests li {
+        font-size: 0.8rem;
+    }
+
+    #experience p,
+    #education p {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+}
+
 
 
 /* -------------------------- thrid page ---------------------------- */
