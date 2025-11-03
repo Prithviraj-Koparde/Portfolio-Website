@@ -51,14 +51,12 @@ function secondpage() {
         x: -200,
         opacity: 0,
         ease: "sine.in",
-        duration: 2,
         scrollTrigger: {
             trigger: "#section-2-top #btn-1",
             scroller: "body",
-            // markers: true,
+            markers: true,
             start: "top 60%",
-            end: "top 55%",
-            scrub: 2,
+            end: "top 50%",
         }
     })
 
@@ -71,8 +69,7 @@ function secondpage() {
             scroller: "body",
             // markers: true,
             start: "top 60%",
-            end: "top 55%",
-            scrub: 2
+            end: "top 50%",
         }
     })
 
@@ -85,8 +82,7 @@ function secondpage() {
             scroller: "body",
             // markers: true,
             start: "top 60%",
-            end: "top 55%",
-            scrub: 2
+            end: "top 50%",
         }
     })
 
@@ -147,7 +143,7 @@ function secondpage() {
     })
 }
 
-// secondpage()
+secondpage()
 
 // ------------------------------third page-------------------------------
 
@@ -227,17 +223,56 @@ function thirdpage() {
 
 // --------------------------------------- fourth page ---------------------------
 
-// let projectCard = document.querySelectorAll(".project-card")
+gsap.from(".section-4-top h1", {
+    x: 200,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".section-4-top h3",
+        scroller: "body",
+        // markers: true,
+        start: "top 60%",
+        end: "top 70%",
+        scrub: 0.5,
+        ease: "power2.out"
+    }
+})
 
-// projectCard.forEach(card=>{
-//     let img = document.querySelector("img")
-//     let projectDesc = document.querySelector(".project-description")
+gsap.from(".section-4-top h3", {
+    x: -200,
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".section-4-top h3",
+        scroller: "body",
+        // markers: true,
+        start: "top 60%",
+        end: "top 70%",
+        scrub: 0.5,
+        ease: "power2.out"
+    }
+})
 
-//     img.addEventListener("mouseenter",()=>{
-//         projectDesc.style.display = "initial"
-//     })
+gsap.from(".section-4-main", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    scrollTrigger: {
+        trigger: ".section-4-main",
+        scroller: "body",
+        // markers: true,
+        start: "top 60%",
+        end: "top 70%",
+        scrub: 1.5,
+        ease: "power2.out"
+    }
+})
 
-//     img.addEventListener("mouseleave",()=>{
-//         projectDesc.style.display = "none"
-//     })
-// })
+gsap.from(".section-4-bottom a", {
+    y: 100,          
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+        trigger: ".section-4-bottom",
+        start: "top 85%",
+    }
+});
