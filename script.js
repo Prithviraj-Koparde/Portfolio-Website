@@ -42,7 +42,7 @@ function firstpage() {
         ease: "power1.inOut"
     })
 }
-firstpage()
+// firstpage()
 
 // ------------------------------- page 2 js -----------------------------
 
@@ -147,76 +147,97 @@ function secondpage() {
     })
 }
 
-secondpage()
+// secondpage()
 
 // ------------------------------third page-------------------------------
 
-gsap.from("#section-3-top-h1", {
-    x: 200,
-    opacity: 0,
-    scrollTrigger: {
-        trigger: "#section-3-top-h1",
+function thirdpage() {
+    gsap.from("#section-3-top-h1", {
+        x: 200,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#section-3-top-h1",
+            scroller: "body",
+            // markers: true,
+            start: "top 60%",
+            end: "top 70%",
+            scrub: 0.5,
+            ease: "power2.out"
+        }
+    })
+
+    gsap.from("#section-3-top-h3", {
+        x: -200,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#section-3-top-h3",
+            scroller: "body",
+            // markers: true,
+            start: "top 60%",
+            end: "top 70%",
+            scrub: 0.5,
+            ease: "power2.out"
+        }
+    })
+
+
+    const skills = [
+        { selector: ".ang-load", percent: 60 },
+        { selector: ".html-load", percent: 95 },
+        { selector: ".css-load", percent: 90 },
+        { selector: ".js-load", percent: 70 },
+        { selector: ".ts-load", percent: 65 },
+        { selector: ".tcss-load", percent: 50 },
+        { selector: ".java-load", percent: 85 },
+        { selector: ".spring-load", percent: 80 },
+        { selector: ".sql-load", percent: 55 },
+        { selector: ".git-load", percent: 70 },
+        { selector: ".docker-load", percent: 50 },
+        { selector: ".aws-load", percent: 40 }
+    ];
+
+
+
+    ScrollTrigger.create({
+        trigger: "#frontend",
         scroller: "body",
         // markers: true,
-        start: "top 60%",
-        end: "top 70%",
-        scrub: 0.5,
-        ease: "power2.out"
-    }
-})
+        start: "top 70%",
+        once: true,
+        onEnter: () => {
+            skills.forEach((skill, index) => {
+                const loader = document.querySelector(skill.selector)
+                const percentage = document.querySelectorAll(".loader-percentage")[index]
+                let count = 0
 
-gsap.from("#section-3-top-h3", {
-    x: -200,
-    opacity: 0,
-    scrollTrigger: {
-        trigger: "#section-3-top-h3",
-        scroller: "body",
-        // markers: true,
-        start: "top 60%",
-        end: "top 70%",
-        scrub: 0.5,
-        ease: "power2.out"
-    }
-})
+                const loadTime = setInterval(() => {
+                    if (count <= skill.percent) {
+                        count++
+                        loader.style.width = `${count}%`
+                        percentage.textContent = `${count}%`
+                    }
+                    else clearInterval(loadTime)
+                }, 20)
+            })
+        }
+    })
+}
 
+// thirdpage()
 
-const skills = [
-    { selector: ".ang-load", percent: 60 },
-    { selector: ".html-load", percent: 95 },
-    { selector: ".css-load", percent: 90 },
-    { selector: ".js-load", percent: 70 },
-    { selector: ".ts-load", percent: 65 },
-    { selector: ".tcss-load", percent: 50 },
-    { selector: ".java-load", percent: 85 },
-    { selector: ".spring-load", percent: 80 },
-    { selector: ".sql-load", percent: 55 },
-    { selector: ".git-load", percent: 70 },
-    { selector: ".docker-load", percent: 50 },
-    { selector: ".aws-load", percent: 40 }
-];
+// --------------------------------------- fourth page ---------------------------
 
+// let projectCard = document.querySelectorAll(".project-card")
 
+// projectCard.forEach(card=>{
+//     let img = document.querySelector("img")
+//     let projectDesc = document.querySelector(".project-description")
 
-ScrollTrigger.create({
-    trigger: "#frontend",
-    scroller: "body",
-    // markers: true,
-    start: "top 70%",
-    once: true,
-    onEnter: () => {
-        skills.forEach((skill, index) => {
-            const loader = document.querySelector(skill.selector)
-            const percentage = document.querySelectorAll(".loader-percentage")[index]
-            let count = 0
+//     img.addEventListener("mouseenter",()=>{
+//         projectDesc.style.display = "initial"
+//     })
 
-            const loadTime = setInterval(() => {
-                if (count <= skill.percent) {
-                    count++
-                    loader.style.width = `${count}%`
-                    percentage.textContent = `${count}%`
-                }
-                else clearInterval(loadTime)
-            }, 20)
-        })
-    }
-})
+//     img.addEventListener("mouseleave",()=>{
+//         projectDesc.style.display = "none"
+//     })
+// })
