@@ -1,50 +1,55 @@
+// ----------------------------------- FIRST PAGE -----------------------------------
+
 function firstpage() {
-    let tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.8 } })
+    let tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.8 } });
 
     tl.from(".nav-links a", {
         y: -100,
         opacity: 0,
         stagger: 0.2,
     })
-        .from("#profile-pic img", {
-            y: 100,
-            opacity: 0,
-        })
-        .from("#intro h1, #intro h2, #intro p", {
-            y: 80,
-            opacity: 0,
-            stagger: 0.3
-        })
-        .from("#buttons button", {
-            x: 100,
-            opacity: 0,
-            stagger: 0.2
-        })
+    .from("#profile-pic img", {
+        y: 100,
+        opacity: 0,
+    })
+    .from("#intro h1, #intro h2, #intro p", {
+        y: 80,
+        opacity: 0,
+        stagger: 0.3,
+    })
+    .from("#buttons button", {
+        x: 100,
+        opacity: 0,
+        stagger: 0.2,
+    });
 
-    const hamMenu = document.querySelector('.ham-menu');
-    const navLinks = document.querySelector('.nav-links');
+    const hamMenu = document.querySelector(".ham-menu");
+    const navLinks = document.querySelector(".nav-links");
 
-    hamMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+    hamMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
     });
 
     // Optional: close menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
         });
     });
+
     gsap.to("#buttons button", {
         scale: 1.01,
         yoyo: true,
         repeat: -1,
         duration: 1,
-        ease: "power1.inOut"
-    })
+        ease: "power1.inOut",
+    });
 }
-// firstpage()
 
-// ------------------------------- page 2 js -----------------------------
+firstpage();
+
+
+// ----------------------------------- SECOND PAGE -----------------------------------
 
 function secondpage() {
     gsap.from("#section-2-top #btn-1", {
@@ -54,11 +59,10 @@ function secondpage() {
         scrollTrigger: {
             trigger: "#section-2-top #btn-1",
             scroller: "body",
-            markers: true,
             start: "top 60%",
             end: "top 50%",
-        }
-    })
+        },
+    });
 
     gsap.from("#section-2-top #btn-2", {
         y: 50,
@@ -67,11 +71,10 @@ function secondpage() {
         scrollTrigger: {
             trigger: "#section-2-top #btn-2",
             scroller: "body",
-            // markers: true,
             start: "top 60%",
             end: "top 50%",
-        }
-    })
+        },
+    });
 
     gsap.from("#section-2-top #btn-3", {
         x: 200,
@@ -80,11 +83,10 @@ function secondpage() {
         scrollTrigger: {
             trigger: "#section-2-top #btn-3",
             scroller: "body",
-            // markers: true,
             start: "top 60%",
             end: "top 50%",
-        }
-    })
+        },
+    });
 
     gsap.from("#section-2-bottom-left #circle-2", {
         x: -200,
@@ -93,11 +95,10 @@ function secondpage() {
         scrollTrigger: {
             trigger: "#section-2-bottom-left #circle-2",
             scroller: "body",
-            // markers: true,
             start: "top 60%",
-            end: "top 55%"
-        }
-    })
+            end: "top 55%",
+        },
+    });
 
     gsap.from("#section-2-bottom-left #circle-1", {
         x: 200,
@@ -107,45 +108,43 @@ function secondpage() {
         scrollTrigger: {
             trigger: "#section-2-bottom-left #circle-1",
             scroller: "body",
-            // markers: true,
             start: "top 60%",
-            end: "top 55%"
-        }
-    })
+            end: "top 55%",
+        },
+    });
 
-    gsap.from("#section-2-bottom-left #circle-3,#section-2-bottom-left img", {
+    gsap.from("#section-2-bottom-left #circle-3, #section-2-bottom-left img", {
         scale: 1.05,
         opacity: 0,
         stagger: 0.1,
         duration: 2,
         ease: "sine.out",
         scrollTrigger: {
-            trigger: "#section-2-bottom-left #circle-3,#section-2-bottom-left img",
+            trigger: "#section-2-bottom-left #circle-3, #section-2-bottom-left img",
             scroller: "body",
-            // markers: true,
             start: "top 60%",
-            end: "top 55%"
-        }
-    })
+            end: "top 55%",
+        },
+    });
 
-    gsap.from("#section-2-bottom-right #experience,#education,#interests", {
+    gsap.from("#section-2-bottom-right #experience, #education, #interests", {
         x: 200,
         opacity: 0,
         stagger: 0.3,
         ease: "sine.out",
         scrollTrigger: {
-            trigger: "#section-2-bottom-left #circle-3,#section-2-bottom-left img",
+            trigger: "#section-2-bottom-left #circle-3, #section-2-bottom-left img",
             scroller: "body",
-            // markers: true,
             start: "top 60%",
             end: "top 55%",
-        }
-    })
+        },
+    });
 }
 
-secondpage()
+secondpage();
 
-// ------------------------------third page-------------------------------
+
+// ----------------------------------- THIRD PAGE -----------------------------------
 
 function thirdpage() {
     gsap.from("#section-3-top-h1", {
@@ -154,13 +153,12 @@ function thirdpage() {
         scrollTrigger: {
             trigger: "#section-3-top-h1",
             scroller: "body",
-            // markers: true,
             start: "top 60%",
             end: "top 70%",
             scrub: 0.5,
-            ease: "power2.out"
-        }
-    })
+            ease: "power2.out",
+        },
+    });
 
     gsap.from("#section-3-top-h3", {
         x: -200,
@@ -168,14 +166,12 @@ function thirdpage() {
         scrollTrigger: {
             trigger: "#section-3-top-h3",
             scroller: "body",
-            // markers: true,
             start: "top 60%",
             end: "top 70%",
             scrub: 0.5,
-            ease: "power2.out"
-        }
-    })
-
+            ease: "power2.out",
+        },
+    });
 
     const skills = [
         { selector: ".ang-load", percent: 60 },
@@ -189,90 +185,120 @@ function thirdpage() {
         { selector: ".sql-load", percent: 55 },
         { selector: ".git-load", percent: 70 },
         { selector: ".docker-load", percent: 50 },
-        { selector: ".aws-load", percent: 40 }
+        { selector: ".aws-load", percent: 40 },
     ];
-
-
 
     ScrollTrigger.create({
         trigger: "#frontend",
         scroller: "body",
-        // markers: true,
         start: "top 70%",
         once: true,
         onEnter: () => {
             skills.forEach((skill, index) => {
-                const loader = document.querySelector(skill.selector)
-                const percentage = document.querySelectorAll(".loader-percentage")[index]
-                let count = 0
+                const loader = document.querySelector(skill.selector);
+                const percentage = document.querySelectorAll(".loader-percentage")[index];
+                let count = 0;
 
                 const loadTime = setInterval(() => {
                     if (count <= skill.percent) {
-                        count++
-                        loader.style.width = `${count}%`
-                        percentage.textContent = `${count}%`
+                        count++;
+                        loader.style.width = `${count}%`;
+                        percentage.textContent = `${count}%`;
+                    } else {
+                        clearInterval(loadTime);
                     }
-                    else clearInterval(loadTime)
-                }, 20)
-            })
-        }
-    })
+                }, 20);
+            });
+        },
+    });
 }
 
-// thirdpage()
+thirdpage();
 
-// --------------------------------------- fourth page ---------------------------
 
-gsap.from(".section-4-top h1", {
-    x: 200,
-    opacity: 0,
-    scrollTrigger: {
-        trigger: ".section-4-top h3",
-        scroller: "body",
-        // markers: true,
-        start: "top 60%",
-        end: "top 70%",
-        scrub: 0.5,
-        ease: "power2.out"
-    }
-})
+// ----------------------------------- FOURTH PAGE -----------------------------------
 
-gsap.from(".section-4-top h3", {
-    x: -200,
-    opacity: 0,
-    scrollTrigger: {
-        trigger: ".section-4-top h3",
-        scroller: "body",
-        // markers: true,
-        start: "top 60%",
-        end: "top 70%",
-        scrub: 0.5,
-        ease: "power2.out"
-    }
-})
+function fourthpage() {
+    gsap.from(".section-4-top h1", {
+        x: 200,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".section-4-top h3",
+            scroller: "body",
+            start: "top 60%",
+            end: "top 70%",
+            scrub: 0.5,
+            ease: "power2.out",
+        },
+    });
 
-gsap.from(".section-4-main", {
-    opacity: 0,
-    y: 100,
-    duration: 1,
-    scrollTrigger: {
-        trigger: ".section-4-main",
-        scroller: "body",
-        // markers: true,
-        start: "top 60%",
-        end: "top 70%",
-        scrub: 1.5,
-        ease: "power2.out"
-    }
-})
+    gsap.from(".section-4-top h3", {
+        x: -200,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".section-4-top h3",
+            scroller: "body",
+            start: "top 60%",
+            end: "top 70%",
+            scrub: 0.5,
+            ease: "power2.out",
+        },
+    });
 
-gsap.from(".section-4-bottom a", {
-    y: 100,          
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: ".section-4-bottom",
-        start: "top 85%",
-    }
-});
+    gsap.from(".section-4-main", {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        scrollTrigger: {
+            trigger: ".section-4-main",
+            scroller: "body",
+            start: "top 60%",
+            end: "top 70%",
+            scrub: 1.5,
+            ease: "power2.out",
+        },
+    });
+
+    gsap.from(".section-4-bottom a", {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".section-4-bottom",
+            start: "top 85%",
+        },
+    });
+}
+
+fourthpage();
+
+
+// ----------------------------------- FIFTH PAGE -----------------------------------
+
+function fifthpage() {
+    gsap.from(".contact-form", {
+        x: -100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".section-5",
+            start: "top 80%",
+        },
+    });
+
+    gsap.from(".contact-info", {
+        x: 100,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".section-5",
+            start: "top 80%",
+        },
+    });
+}
+
+fifthpage();
