@@ -8,20 +8,20 @@ function firstpage() {
         opacity: 0,
         stagger: 0.2,
     })
-    .from("#profile-pic img", {
-        y: 100,
-        opacity: 0,
-    })
-    .from("#intro h1, #intro h2, #intro p", {
-        y: 80,
-        opacity: 0,
-        stagger: 0.3,
-    })
-    .from("#buttons button", {
-        x: 100,
-        opacity: 0,
-        stagger: 0.2,
-    });
+        .from("#profile-pic img", {
+            y: 100,
+            opacity: 0,
+        })
+        .from("#intro h1, #intro h2, #intro p", {
+            y: 80,
+            opacity: 0,
+            stagger: 0.3,
+        })
+        .from("#buttons button", {
+            x: 100,
+            opacity: 0,
+            stagger: 0.2,
+        });
 
     const hamMenu = document.querySelector(".ham-menu");
     const navLinks = document.querySelector(".nav-links");
@@ -30,7 +30,7 @@ function firstpage() {
         navLinks.classList.toggle("active");
     });
 
-    // Optional: close menu when a link is clicked
+    // close menu when a link is clicked
     document.querySelectorAll(".nav-links a").forEach(link => {
         link.addEventListener("click", () => {
             navLinks.classList.remove("active");
@@ -302,3 +302,4 @@ function fifthpage() {
 }
 
 fifthpage();
+

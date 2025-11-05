@@ -30,7 +30,7 @@ nav {
     align-items: center;
     justify-content: center;
     /* space between links and hamburger */
-    height: 10%;
+    height: 8%;
     width: 100%;
     background-color: #121212;
     padding: 0 30px;
@@ -40,13 +40,14 @@ nav {
 .ham-menu {
     display: none;
     cursor: pointer;
+    height: 8%;
+    width: 100%;
 }
 
 .ham-menu img {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     filter: invert(1);
-    /* makes it white */
 }
 
 /* normal link styling */
@@ -77,7 +78,6 @@ nav a:hover {
     justify-content: center;
     height: 55%;
     width: 100%;
-
 }
 
 #profile-pic img {
@@ -110,6 +110,7 @@ nav a:hover {
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
     line-height: 1.2;
+    font-family: "Poppins", sans-serif;
 }
 
 #intro h1:hover {
@@ -124,12 +125,14 @@ nav a:hover {
     font-size: 1.3rem;
     margin-bottom: 10px;
     color: #E0E0E0;
+    font-family: "Inter", sans-serif;
 }
 
 #intro p {
     font-size: 1rem;
     max-width: 600px;
     color: #E0E0E0;
+    font-family: "Inter", sans-serif;
 }
 
 #buttons {
@@ -149,6 +152,7 @@ nav a:hover {
     font-size: 1rem;
     font-weight: 600;
     color: #121212;
+    font-family: "Inter", sans-serif;
 }
 
 #buttons button:hover {
@@ -218,6 +222,7 @@ nav a:hover {
     nav {
         justify-content: space-between;
         padding: 10px 20px;
+        height: 9%;
     }
 
     /* show hamburger */
@@ -235,30 +240,31 @@ nav a:hover {
         position: absolute;
         top: 60px;
         right: 0;
-        /* ✅ opens below hamburger on right side */
+        /* opens below hamburger on right side */
         height: 100vh;
-        width: 100%;
+        width: 70%;
         text-align: center;
         padding: 20px 0;
         gap: 20px;
         border-top: 1px solid #333;
+        backdrop-filter: blur(10px);
     }
 
     /* when active class is added */
     .nav-links.active {
         display: flex;
-        animation: slideDown 0.3s ease forwards;
+        animation: slideLeft 0.3s ease forwards;
     }
 
-    @keyframes slideDown {
+    @keyframes slideLeft {
         from {
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateX(100px);
         }
 
         to {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
         }
     }
 
@@ -318,6 +324,7 @@ nav a:hover {
     font-size: 1rem;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    font-family: "Poppins", sans-serif;
 }
 
 #btn-1 {
@@ -423,6 +430,10 @@ nav a:hover {
     color: #E0E0E0;
 }
 
+#exp-1 {
+    margin-bottom: 0.5rem;
+}
+
 #experience h1,
 #education h1,
 #interests h1 {
@@ -437,25 +448,31 @@ nav a:hover {
 
 #experience h2,
 #education h2 {
+    font-weight: 500;
     font-size: 1.4rem;
     color: white;
+    font-family: "Poppins", sans-serif;
 }
 
 #experience h3,
 #education h3,
 #interests li {
-    font-size: 1rem;
+    font-weight: 300;
+    font-size: 0.9rem;
     color: #d0cece;
+    font-family: "Inter", sans-serif;
 }
 
 #experience p,
 #education p {
-    font-size: 0.8rem;
+    font-family: 300;
+    font-size: 0.7rem;
     color: #E0E0E0;
+    font-family: "Inter", sans-serif;
 }
 
 #interests ul {
-    padding-left: 15px;
+    list-style: none;
 }
 
 /* ---------- Responsive Styles ---------- */
@@ -504,14 +521,14 @@ nav a:hover {
 
     #experience p,
     #education p {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         margin-bottom: 10px;
     }
 }
 
 
 
-/* -------------------------- thrid page ---------------------------- */
+/* -------------------------- third page ---------------------------- */
 
 .section-3 {
     width: 100%;
@@ -630,7 +647,7 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
-/* ✅ Responsive Media Queries */
+/* Responsive */
 @media (max-width: 992px) {
     .card {
         width: 80%;
@@ -713,7 +730,8 @@ nav a:hover {
     height: 200px;
     width: 100%;
     object-fit: cover;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
+    border-radius: 10px;
 }
 
 .project-card img:hover {
@@ -741,12 +759,14 @@ nav a:hover {
     font-size: 1.5rem;
     color: #E0E0E0;
     margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
 }
 
 .project-description p {
     width: 90%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #E0E0E0;
+    font-family: "Inter", sans-serif;
 }
 
 .project-card-2,
@@ -764,10 +784,11 @@ nav a:hover {
 }
 
 .project-skills h3 {
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
     background: linear-gradient(90deg, #00ffff, #00bcd4);
     border-radius: 20px;
     padding: 1px 5px;
+    font-family: "Inter", sans-serif;
 }
 
 .project-card-bottom h2 {
@@ -793,7 +814,7 @@ nav a:hover {
     margin-left: 25px;
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    font-family: "Inter", sans-serif;
+
 }
 
 .project-card-bottom a img {
@@ -815,7 +836,7 @@ nav a:hover {
     font-weight: 600;
     color: #121212;
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .section-4-bottom a:hover {
@@ -825,8 +846,8 @@ nav a:hover {
 }
 
 .section-4-bottom a img {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
 }
 
 /* --------------------------- fourth page responsive -------------------- */
@@ -1001,9 +1022,24 @@ nav a:hover {
     color: #00bcd4;
 }
 
+.back-to-home {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    filter: invert(1);
+    background-color: #ff0000;
+    padding: 5px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .section-5-container {
+        padding: 2rem;
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
@@ -1011,5 +1047,11 @@ nav a:hover {
     .contact-form,
     .contact-info {
         width: 100%;
+    }
+
+    .back-to-home {
+        height: 35px;
+        width: 35px;
+        bottom: 1%;
     }
 }
