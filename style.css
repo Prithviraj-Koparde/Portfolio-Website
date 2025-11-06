@@ -85,6 +85,8 @@ nav a:hover {
     width: 400px;
     border-radius: 100%;
     object-fit: cover;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 90%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 90%);
 }
 
 /* -----------------------intro-section--------------------------- */
@@ -408,6 +410,8 @@ nav a:hover {
     border-radius: 50%;
     top: 120px;
     left: 121px;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 80%);
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 80%);
 }
 
 /* ---------- Right Content ---------- */
@@ -1035,6 +1039,17 @@ nav a:hover {
     cursor: pointer;
 }
 
+.cpy-right {
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    color: #888;
+    /* soft gray */
+    position: fixed;
+    color: white;
+    bottom: 1%;
+    left: 1%;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .section-5-container {
@@ -1053,5 +1068,9 @@ nav a:hover {
         height: 35px;
         width: 35px;
         bottom: 1%;
+    }
+
+    .cpy-right {
+        font-size: 0.5rem;
     }
 }
