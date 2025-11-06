@@ -27,5 +27,5 @@ It showcases my skills, projects, and contact information in a clean and respons
 ---
 
 🖼️ Preview
-![Website-Preview](images/arrow-up-line.svg)
+![Website-Preview](images/PreviewSS.png)
 
