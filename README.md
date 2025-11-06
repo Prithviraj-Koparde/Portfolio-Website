@@ -6,7 +6,7 @@ It showcases my skills, projects, and contact information in a clean and respons
 ---
 
 🚀 Live Demo
-🔗 (https://Prithviraj-Koparde.github.io/Portfolio-Website)
+🔗 (https://Prithviraj-Koparde/Portfolio-Website)
 
 ---
 
