@@ -185,6 +185,7 @@ nav a:hover {
 /* mobiles <= 768px */
 
 @media (max-width: 768px) {
+
     nav {
         gap: 20px;
         flex-wrap: wrap;
@@ -221,6 +222,10 @@ nav a:hover {
 /* small phones <= 520px */
 
 @media (max-width: 520px) {
+    .section-1 {
+        padding-top: 10px;
+    }
+
     nav {
         justify-content: space-between;
         padding: 10px 20px;
@@ -277,6 +282,10 @@ nav a:hover {
     #profile-pic img {
         height: 200px;
         width: 200px;
+    }
+
+    #intro {
+        margin-top: 10px;
     }
 
     #intro h1 {
@@ -501,6 +510,16 @@ nav a:hover {
 
 /* Mobile devices */
 @media (max-width: 520px) {
+    .section-2 {
+        height: 80vh;
+        width: 100%;
+    }
+
+    .section-3 {
+        height: 250vh;
+        width: 100%;
+    }
+
     #section-2-top {
         display: none;
     }
@@ -659,6 +678,12 @@ nav a:hover {
 }
 
 @media (max-width: 600px) {
+    .section-3 {
+        height: 230vh;
+        width: 100%;
+        padding: 10px 0px;
+    }
+
     #section-3-top-h1 {
         font-size: 1.6rem;
     }
@@ -862,6 +887,17 @@ nav a:hover {
 }
 
 @media (max-width: 600px) {
+    .section-4 {
+        height: 180vh;
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .section-5 {
+        height: 150vh;
+        padding: 0px 0px;
+    }
+
     .section-4-top h1 {
         font-size: 1.6rem;
     }
